@@ -28,20 +28,34 @@
 #endregion
 
 #region
-int[] array = { 6, 3, 9, 11, 15, 8 };
-int max = array[0];
-int min = array[0];
+//int[] array = { 6, 3, 9, 11, 15, 8 };
+//int max = array[0];
+//int min = array[0];
 
-for (int i=1; i<array.Length; i++)
+//for (int i=1; i<array.Length; i++)
+//{
+//    if (array[i] > max)
+//    {
+//        max = array[i];
+//    }
+//    if (array[i] < min)
+//    {
+//        min = array[i];
+//    }
+//}
+//Console.WriteLine(max+min);
+#endregion
+
+#region
+int[] array = { 4, 6, 9, 12, 1, 43, 67, 99 };
+int count = 0;
+
+for (int i=0; i<array.Length; i++)
 {
-    if (array[i] > max)
+    if (array[i] % 2 == 0 && array[i] % 3 == 0)
     {
-        max = array[i];
-    }
-    if (array[i] < min)
-    {
-        min = array[i];
+        count++;
     }
 }
-Console.WriteLine(max+min);
+Console.WriteLine(count);
 #endregion
