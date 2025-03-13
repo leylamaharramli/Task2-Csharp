@@ -47,12 +47,34 @@
 #endregion
 
 #region
-int[] array = { 4, 6, 9, 12, 1, 43, 67, 99 };
+//int[] array = { 4, 6, 9, 12, 1, 43, 67, 99 };
+//int count = 0;
+
+//for (int i=0; i<array.Length; i++)
+//{
+//    if (array[i] % 2 == 0 && array[i] % 3 == 0)
+//    {
+//        count++;
+//    }
+//}
+//Console.WriteLine(count);
+#endregion
+
+#region
+int[] array = { 4, 12, 9, 2, 8, 10, 1, 22 };
 int count = 0;
 
 for (int i=0; i<array.Length; i++)
 {
-    if (array[i] % 2 == 0 && array[i] % 3 == 0)
+    int bolen_count = 0;
+    for (int j = 2; j <= array[i] / 2; j++)
+    {
+        if (array[i] % j == 0)
+        {
+            bolen_count++;
+        }
+    }
+    if (bolen_count > 0)
     {
         count++;
     }
